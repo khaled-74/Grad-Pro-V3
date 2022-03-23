@@ -339,6 +339,8 @@ GameObject:
   - component: {fileID: 5448431334155211095}
   - component: {fileID: 5448431334155211094}
   - component: {fileID: 5448431334155211089}
+  - component: {fileID: 5627180304541370689}
+  - component: {fileID: 783881555729597769}
   m_Layer: 0
   m_Name: FP Player
   m_TagString: Player
@@ -899,6 +901,37 @@ MonoBehaviour:
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &5627180304541370689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531665314387595415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3539cb170e131ef468e228f0ea7de4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783881555729597769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531665314387595415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ef860eae80df04fbe8ea7e80cce085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 1
+  interactionKey: 101
+  interactionRayPoint: {x: 0, y: 0, z: 0}
+  interactionDistance: 0
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &8348204097540840097
 GameObject:
   m_ObjectHideFlags: 0

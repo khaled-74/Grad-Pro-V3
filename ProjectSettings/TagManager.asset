@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Footsteps/Wood
+  - Ladder
+  - Footsteps/Stone
+  - Footsteps/Carpet
+  - Footsteps/Marble
+  - Footsteps/Dirt
   layers:
   - Default
   - TransparentFX
@@ -11,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
   - 
-  - 
-  - 
+  - Interactable
   - 
   - 
   - 

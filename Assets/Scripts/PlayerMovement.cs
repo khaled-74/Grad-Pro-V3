@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip[] woodClips = default;//the floor of the room
     [SerializeField] private AudioClip[] dirtClips = default;//before the grave
     [SerializeField] private AudioClip[] stoneClips = default;//in the grave
+    [SerializeField] private AudioClip[] marbleClips = default;
+    [SerializeField] private AudioClip[] carpetClips = default;
     private float footstepTimer = 0;
     private float GetCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultiplier : isSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
 
@@ -211,8 +213,16 @@ public class PlayerMovement : MonoBehaviour
                         footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
                         break;
 
+                    case "Footsteps/Marble":
+                        footstepsAudioSource.PlayOneShot(marbleClips[Random.Range(0, marbleClips.Length - 1)]);
+                        break;
+
+                    case "Footsteps/Carpet":
+                        footstepsAudioSource.PlayOneShot(carpetClips[Random.Range(0, carpetClips.Length - 1)]);
+                        break;
+
                     default://whatever default we want comment if not needed
-                        footstepsAudioSource.PlayOneShot(stoneClips[Random.Range(0, stoneClips.Length - 1)]);
+                        footstepsAudioSource.PlayOneShot(dirtClips[Random.Range(0, dirtClips.Length - 1)]);
                         break;
                 }
             }
