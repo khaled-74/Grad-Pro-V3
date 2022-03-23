@@ -559,6 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa266900091a542bb541fe679ba4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 4531665314387595411}
+  flashLightClip: {fileID: 8300000, guid: 41aec2dc35faa5b459ea956a65c009a7, type: 3}
   FlashlightLight: {fileID: 2382897528900619510}
 --- !u!114 &5448431334155211118
 MonoBehaviour:
@@ -588,7 +590,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 4531665314387595411}
-  flashLightClip: {fileID: 8300000, guid: 41aec2dc35faa5b459ea956a65c009a7, type: 3}
   jumpClip: {fileID: 8300000, guid: 9d5b990f9cd282c448311c5f6471b1e9, type: 3}
 --- !u!114 &5448431334155211095
 MonoBehaviour:
@@ -741,6 +742,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8420942850077699966, guid: 56f450408b7bb71498abbb529c727d2c, type: 3}
+          m_TargetAssemblyTypeName: PixelCrushers.InputDeviceManager, Assembly-CSharp
+          m_MethodName: ForceCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
@@ -815,6 +828,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 8420942850077699966, guid: 56f450408b7bb71498abbb529c727d2c, type: 3}
+          m_TargetAssemblyTypeName: PixelCrushers.InputDeviceManager, Assembly-CSharp
+          m_MethodName: ForceCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
     onConversationCancelled:
       m_PersistentCalls:
