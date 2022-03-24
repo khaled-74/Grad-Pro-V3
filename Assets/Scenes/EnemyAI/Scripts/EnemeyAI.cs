@@ -13,7 +13,7 @@ public class EnemeyAI : MonoBehaviour
     public Vector3 walkPoint;
     bool walkPointSet; 
     public float walkPointRange;
-    public GameObject projectile;
+  //  public GameObject projectile;
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -81,9 +81,9 @@ public class EnemeyAI : MonoBehaviour
 
             ///Attack code here
             ///
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
             ///
 
