@@ -16,10 +16,10 @@ public class DoorTriggerButton : Interactable
         { 
             door.OpenDoor();
         }
-        else
-        {
-            door.CloseDoor();
-        }
+        //else
+        //{
+        //    door.CloseDoor();
+        //}
     }
 
     public override void OnLoseFocus()
