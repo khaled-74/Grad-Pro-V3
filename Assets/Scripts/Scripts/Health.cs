@@ -10,6 +10,10 @@ public class Health : MonoBehaviour
     float maxHealth = 100f;
     float lerpSpeed =0.1f;
 
+    //Hit Effects
+    public GameObject m_GotHitScreen;
+   // public float hitFade= -0.01f;
+
     private void Start()
     {
         health = maxHealth;
@@ -24,8 +28,17 @@ public class Health : MonoBehaviour
 
         HealthBarFiller();
         ColorChanger();
-        if (Input.GetKeyDown(KeyCode.KeypadPlus)) { Heal(10f); }
-        if (Input.GetKeyDown(KeyCode.KeypadMinus)) { Damage(10f); }
+
+        if (m_GotHitScreen != null) 
+        {
+            if (m_GotHitScreen.GetComponent<Image>().color.a > 0) 
+            {
+                var color = m_GotHitScreen.GetComponent<Image>().color;
+                color.a -= 0.001f;
+                m_GotHitScreen.GetComponent<Image>().color = color;
+            }
+        }
+
     }
 
     void HealthBarFiller()
@@ -55,10 +68,14 @@ public class Health : MonoBehaviour
     {
         if (health > 0)
             health -= damagePoints;
+        var color = m_GotHitScreen.GetComponent<Image>().color;
+        color.a = 0.8f;
+        m_GotHitScreen.GetComponent<Image>().color = color;
     }
     public void Heal(float healingPoints)
     {
         if (health < maxHealth)
             health += healingPoints;
     }
+    
 }

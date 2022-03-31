@@ -15,7 +15,7 @@ public class EnemeyAI : MonoBehaviour
     public float walkPointRange;
   //  public GameObject projectile;
     //Attacking
-    public float timeBetweenAttacks;
+    public float timeBetweenAttacks=0.01f;
     bool alreadyAttacked;
 
     //States
@@ -75,7 +75,7 @@ public class EnemeyAI : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        //transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
@@ -99,6 +99,8 @@ public class EnemeyAI : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+        animator.SetBool("isAttacking", false);
+
     }
 
     public void TakeDamage(int damage) 
@@ -118,9 +120,5 @@ public class EnemeyAI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
-    //public void Damage(float damagePoints)
-    //{
-    //    if (playerHealth.health > 0)
-    //        playerHealth.health -= damagePoints;
-    //}
+ 
 }
