@@ -4,9 +4,10 @@ public class Health : MonoBehaviour
 {
     public Text healthText;
     public Image healthBar;//, ringHealthBar;
-   // public Image[] healthPoints;
+                           // public Image[] healthPoints;
 
-    float health, maxHealth = 100f;
+    public   float health; 
+    float maxHealth = 100f;
     float lerpSpeed =0.1f;
 
     private void Start()

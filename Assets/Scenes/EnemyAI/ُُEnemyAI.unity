@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 930709003}
+    - target: {fileID: 2100532461147437260, guid: 16fd7dd37361e31409f2c7dc5cd3fffa, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1002142076}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16fd7dd37361e31409f2c7dc5cd3fffa, type: 3}
 --- !u!850595691 &671301509
@@ -490,6 +494,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 27.199, y: 0, z: 0}
+--- !u!114 &1002142076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435517071971939288, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+  m_PrefabInstance: {fileID: 2053096054}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95b6695f881a9144ac96164633ed527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080582604
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,6 +4812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FP Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8435517071971939288, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
 --- !u!4 &543450652720907366 stripped
@@ -4867,6 +4886,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2100532461147437260, guid: 16fd7dd37361e31409f2c7dc5cd3fffa, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1002142076}
     - target: {fileID: 2100532461147437262, guid: 16fd7dd37361e31409f2c7dc5cd3fffa, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1

@@ -22,6 +22,8 @@ public class EnemeyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Player Health
+    public Health playerHealth;
 
  
     private void Awake()
@@ -68,7 +70,7 @@ public class EnemeyAI : MonoBehaviour
         //agent.speed = 6f;
         //animator.SetBool("isRunning",true);
         animator.SetBool("isAttacking", false);
-
+        
     }
     private void AttackPlayer()
     {
@@ -77,8 +79,9 @@ public class EnemeyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            playerHealth.Damage(10f);
             animator.SetBool("isAttacking", true);
-
+            
             ///Attack code here
             ///
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -115,4 +118,9 @@ public class EnemeyAI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
+    //public void Damage(float damagePoints)
+    //{
+    //    if (playerHealth.health > 0)
+    //        playerHealth.health -= damagePoints;
+    //}
 }
