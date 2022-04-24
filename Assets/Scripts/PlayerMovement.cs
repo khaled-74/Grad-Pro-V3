@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprinting => Input.GetKey(sprintKey);
     private bool shouldCrouch => Input.GetKey(crouchKey) && !duringCrouchingAnimation && controller.isGrounded;
 
+    [SerializeField] private AudioSource startAudioSource = default;
+    [SerializeField] private AudioClip[] s1Clip = default;
+
     [Header("Functional Options")]
     [SerializeField] private bool canJump = true;
     [SerializeField] private bool canMove = true;
@@ -28,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jumping Parameters")]
     [SerializeField] public float gravity = -9.18f;
     [SerializeField] public float jumpHeight = 3f;
+    [SerializeField] private AudioSource jumpAudioSource = default;
+    [SerializeField] private AudioClip[] v1Clip = default;
     public Transform groundCheck;
     public float groundDistance = 0.4f;//radius of the sphere
     public LayerMask groundMask;//to control wat objects the sphere should check for
@@ -87,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    private void Start()
+    {
+        startAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -140,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            jumpAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);
         }
 
         velocity.y += gravity * Time.deltaTime;
