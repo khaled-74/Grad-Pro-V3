@@ -507,7 +507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531665312530313420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5588468882663478279}
@@ -702,7 +702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531665312712030894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.81, z: 0}
+  m_LocalPosition: {x: 0, y: -1.73, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4531665314387595409}
@@ -748,7 +748,7 @@ Transform:
   m_GameObject: {fileID: 4531665314387595415}
   m_LocalRotation: {x: 0, y: 0.28703445, z: -0, w: -0.9579203}
   m_LocalPosition: {x: 24, y: 1.5, z: -148.5}
-  m_LocalScale: {x: 3, y: 3.5, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4531665312684785878}
   - {fileID: 4531665312530313417}
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startAudioSource: {fileID: 4531665314387595411}
   s1Clip:
-  - {fileID: 8300000, guid: 0a61ddb97d67abf4085d9543b8c5bd44, type: 3}
+  - {fileID: 8300000, guid: eaf032f31cb90e34c83954a8237e9e8e, type: 3}
   canJump: 1
   canMove: 1
   canCrouch: 1
@@ -844,8 +844,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b129e694a0fa16f498b497481befe169, type: 3}
   - {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
   marbleClips:
-  - {fileID: 8300000, guid: fbe1939915c91b74f9eded7665492ef6, type: 3}
-  - {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
+  - {fileID: 8300000, guid: 91569a86e45fa78468a06041b79cc6ea, type: 3}
   carpetClips:
   - {fileID: 8300000, guid: a2cf935dcad44514894bf910c443d507, type: 3}
   - {fileID: 8300000, guid: 884f1d42e7a5e98478d53bfc4b98aada, type: 3}
@@ -1326,7 +1325,7 @@ MonoBehaviour:
   canInteract: 1
   interactionKey: 99
   interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
-  interactionDistance: 6
+  interactionDistance: 10
   interactableLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1339,7 +1338,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4531665314387595415}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
@@ -1646,6 +1645,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100018, guid: c4a8f393ea9df344583b022831f75d9c, type: 3}
   m_PrefabInstance: {fileID: 843511170}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1795383260
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843543344}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 2
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!82 &1402016892
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1857,22 +1872,6 @@ MonoBehaviour:
   currentAmmo: 0
   ammoCounter: {fileID: 7687860326356667409}
   muzzleFlash: {fileID: 5172828580588849434}
---- !u!54 &1795383260
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843543344}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 2
-  m_Constraints: 0
-  m_CollisionDetection: 3
 --- !u!1001 &843678565
 PrefabInstance:
   m_ObjectHideFlags: 0
