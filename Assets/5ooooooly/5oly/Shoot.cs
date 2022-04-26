@@ -25,7 +25,7 @@ public class Shoot : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start()//<--
     {
         currentAmmo = defaultAmmo;
 
@@ -42,7 +42,7 @@ public class Shoot : MonoBehaviour
 
         ammoCounter.text = currentAmmo.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextTimeToFire && !needReload)
+        if (Input.GetKeyDown(KeyCode.G) && Time.time >= nextTimeToFire && !needReload)//<--
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             currentAmmo--;
@@ -50,20 +50,10 @@ public class Shoot : MonoBehaviour
             aS.Play();
 
 
-
-
-
-
-
-
             Rigidbody hitPlayer;
             hitPlayer = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
             hitPlayer.velocity = transform.TransformDirection(Vector3.forward * 100);
             //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
-
-
-
-
 
 
             for (var i = 0; i < Input.touchCount; ++i)
@@ -79,19 +69,6 @@ public class Shoot : MonoBehaviour
                 }
             }
         }
-
-
-
-        
-
-
-
-
-
-
-
-
-
 
 
         if (Input.GetKeyDown(KeyCode.R))

@@ -10,7 +10,7 @@ public class Key : Interactable
 {
     [SerializeField] private keyType _KeyType;
     [SerializeField] private GameObject actor;
-    public enum keyType { Gun, Journal, PuzzlePiece };
+    public enum keyType { Gun, Journal};
 
     public KeyHolder _KeyHolder;
     [SerializeField] private AudioSource pickUpAudioSource = default;

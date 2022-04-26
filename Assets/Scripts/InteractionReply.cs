@@ -9,7 +9,7 @@ public class InteractionReply : Interactable
 
     public override void OnFocus()
     {
-        PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press E to interact with", gameObject.transform, actor.transform);
+        PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press C to interact with", gameObject.transform, actor.transform);
     }
 
     public override void OnInteract()
