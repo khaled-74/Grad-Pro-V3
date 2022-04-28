@@ -9,11 +9,19 @@ public class InteractionReply : Interactable
 
     public override void OnFocus()
     {
+        if(gameObject.name == "Stand")
+        {
+            PixelCrushers.DialogueSystem.DialogueManager.BarkString("Interact", gameObject.transform, actor.transform);
+        }
         PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press C to interact with", gameObject.transform, actor.transform);
     }
 
     public override void OnInteract()
     {
+        if (gameObject.name == "Stand")
+        {
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation("sees puzzle", actor.transform);
+        }
         PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Barks", actor.transform, null, Random.Range(4, 6));
     }
 
