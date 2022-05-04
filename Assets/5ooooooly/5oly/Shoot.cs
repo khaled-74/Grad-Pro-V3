@@ -21,7 +21,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] ParticleSystem muzzleFlash;
 
-    private Animator animator;
+   // private Animator animator;
 
     AudioSource aS;
 
@@ -32,7 +32,7 @@ public class Shoot : MonoBehaviour
         currentAmmo = defaultAmmo;
 
         aS = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,8 +50,9 @@ public class Shoot : MonoBehaviour
            // animator.enabled = true;
             nextTimeToFire = Time.time + 1f / fireRate;
             currentAmmo--;
-            animator.Play("FireGun");
+            //animator.SetBool("Firing", true);
             muzzleFlash.Play();
+           // animator.SetBool("Firing", false);
             //animator.enabled = false;
             aS.Play();
 
