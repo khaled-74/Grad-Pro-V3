@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float crouchHeight = 1f;
     [SerializeField] private float standingHeight = 3.8f;
     [SerializeField] private float timeToCrouch = 0.25f;
+    [SerializeField] private AudioSource crouchAudioSource = default;
+    [SerializeField] private AudioClip[] v2Clip = default;
     [SerializeField] private Vector3 crouchCenter = new Vector3(0, 1f, 0);
     [SerializeField] private Vector3 standingCenter = new Vector3(0, 0, 0);
     private bool isCrouching;
@@ -66,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float baseStepSpeed = 0.5f;
     [SerializeField] private float crouchStepMultiplier = 1.5f;
     [SerializeField] private float sprintStepMultiplier = 0.6f;
+    [SerializeField] private float camLength = 12f;
     [SerializeField] private AudioSource footstepsAudioSource = default;
     [SerializeField] private AudioClip[] woodClips = default;//the floor of the room
     [SerializeField] private AudioClip[] dirtClips = default;//before the grave
@@ -160,7 +163,10 @@ public class PlayerMovement : MonoBehaviour
     private void HandleCrouch()
     {
         if (shouldCrouch)
+        {
             StartCoroutine(CrouchStand());
+            crouchAudioSource.PlayOneShot(v2Clip[Random.Range(0, v2Clip.Length - 1)]);
+        }
     }
     private void HandleHeadBob()
     {
@@ -208,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(footstepTimer <= 0)
         {
-            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 3))
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, camLength))
             {
                 switch (hit.collider.tag)
                 {

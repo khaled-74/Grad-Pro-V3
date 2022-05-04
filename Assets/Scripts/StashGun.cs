@@ -11,6 +11,7 @@ public class StashGun : MonoBehaviour
     [SerializeField] private List<Key.keyType> _keyType;
     public Transform player, gunContainer, fpsCamera;
     public bool equiped;
+    public bool stashed=true;
     public static bool slotFilled;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class StashGun : MonoBehaviour
     {
         
         //took the gun & presses q to equip it
-        if (!equiped && _keyHolder.ContainsKey(_keyType) && Input.GetKeyDown(KeyCode.E) && !slotFilled)
+        if (!equiped && (_keyHolder.ContainsKey(_keyType) || stashed) && Input.GetKeyDown(KeyCode.E) && !slotFilled)
         { Debug.Log("first if is true"); Equip(); Debug.Log("out of equip"); }
        
         //the gun is equipped & presses q to unequip it

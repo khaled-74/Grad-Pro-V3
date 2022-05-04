@@ -1783,6 +1783,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 8.46
       objectReference: {fileID: 0}
+    - target: {fileID: 4531665314387595408, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+      propertyPath: crouchAudioSource
+      value: 
+      objectReference: {fileID: 1526991317}
+    - target: {fileID: 4531665314387595408, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+      propertyPath: v2Clip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531665314387595408, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+      propertyPath: v2Clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 019c12c93314d344e8c6ec7f2338b078, type: 3}
     - target: {fileID: 4531665314387595409, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -21,6 +21,8 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] ParticleSystem muzzleFlash;
 
+    private Animator animator;
+
     AudioSource aS;
 
 
@@ -30,6 +32,7 @@ public class Shoot : MonoBehaviour
         currentAmmo = defaultAmmo;
 
         aS = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,17 +47,18 @@ public class Shoot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G) && Time.time >= nextTimeToFire && !needReload)//<--
         {
+           // animator.enabled = true;
             nextTimeToFire = Time.time + 1f / fireRate;
             currentAmmo--;
+            animator.Play("FireGun");
             muzzleFlash.Play();
+            //animator.enabled = false;
             aS.Play();
-
 
             Rigidbody hitPlayer;
             hitPlayer = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
             hitPlayer.velocity = transform.TransformDirection(Vector3.forward * 100);
             //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
-
 
             for (var i = 0; i < Input.touchCount; ++i)
             {
@@ -69,7 +73,6 @@ public class Shoot : MonoBehaviour
                 }
             }
         }
-
 
         if (Input.GetKeyDown(KeyCode.R))
         {
