@@ -9382,6 +9382,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1526991321, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
+      propertyPath: conversation
+      value: RA's room
+      objectReference: {fileID: 0}
     - target: {fileID: 4531665312530313417, guid: 9f6069b9ab5e90b4d81a7db4dd8b53a6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.7000003
