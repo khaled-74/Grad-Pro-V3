@@ -13,6 +13,10 @@ public class InteractionReply : Interactable
         {
             PixelCrushers.DialogueSystem.DialogueManager.BarkString("Interact", gameObject.transform, actor.transform);
         }
+        if (gameObject.name == "Stairs")
+        {
+            PixelCrushers.DialogueSystem.DialogueManager.BarkString("Interact", gameObject.transform, actor.transform);
+        }
         PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press C to interact with", gameObject.transform, actor.transform);
     }
 
@@ -21,6 +25,10 @@ public class InteractionReply : Interactable
         if (gameObject.name == "Stand")
         {
             PixelCrushers.DialogueSystem.DialogueManager.StartConversation("sees puzzle", actor.transform);
+        }
+        if (gameObject.name == "Stairs")
+        {
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation("RA's puzzle", actor.transform);
         }
         PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Barks", actor.transform, null, Random.Range(4, 6));
     }
