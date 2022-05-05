@@ -64,7 +64,7 @@ public class LaserBeam
         else if (hitInfo.collider.gameObject.tag =="RA")
         {
             //Win condition
-             
+            Debug.Log("You win");
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
 
