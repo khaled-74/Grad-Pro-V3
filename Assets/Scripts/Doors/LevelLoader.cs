@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     [SerializeField]public Animator transition;
     [SerializeField]public float transitionTime = 1f;
+   // [SerializeField] public GameObject player = default;
 
     //// Update is called once per frame
     //void Update()
@@ -17,6 +18,12 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void ForRa()
+    {
+        SceneManager.LoadScene("Act 3");
+        //player.transform.position = newPos;
     }
 
     IEnumerator LoadLevel(int levelIndex)

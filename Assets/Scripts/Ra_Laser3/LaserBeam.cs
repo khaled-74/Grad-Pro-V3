@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LaserBeam 
 {
     Vector3 pos, dir;
     GameObject laserObj;
     LineRenderer laser;
     List<Vector3>laserIndices = new List<Vector3>();
-
+    /*[SerializeField]*/ private GameObject actor = GameObject.Find("FP Player(1)");
+    /*[SerializeField]*/
+    private LevelLoader loader = (LevelLoader)GameObject.FindObjectOfType(typeof(LevelLoader));
     public LaserBeam(Vector3 pos,Vector3 dir,Material material) 
     {
         this.laser = new LineRenderer();
@@ -67,7 +69,9 @@ public class LaserBeam
             Debug.Log("You win");
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
-
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Conv W RA", actor.transform);
+            loader.ForRa();
+           // SceneManager.LoadScene("Act 3");
         }
         else
         {

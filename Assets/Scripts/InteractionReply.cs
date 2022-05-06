@@ -17,6 +17,7 @@ public class InteractionReply : Interactable
         {
             PixelCrushers.DialogueSystem.DialogueManager.BarkString("Interact", gameObject.transform, actor.transform);
         }
+
         PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press C to interact with", gameObject.transform, actor.transform);
     }
 
