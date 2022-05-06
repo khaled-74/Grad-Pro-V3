@@ -11,6 +11,12 @@ TagManager:
   - Footsteps/Marble
   - Footsteps/Dirt
   - 'Enemy '
+  - Mirror
+  - RA
+  - DropArea
+  - wall
+  - Object1
+  - bullet
   layers:
   - Default
   - TransparentFX
