@@ -45,7 +45,7 @@ public class Shoot : MonoBehaviour
 
         ammoCounter.text = currentAmmo.ToString();
 
-        if (Input.GetKeyDown(KeyCode.G) && Time.time >= nextTimeToFire && !needReload)//<--
+        if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire && !needReload)//<--
         {
            // animator.enabled = true;
             nextTimeToFire = Time.time + 1f / fireRate;
