@@ -22,7 +22,7 @@ public class EnemeyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    //Player Health
+    //Player Health (Hero)
     public Health playerHealth;
 
  
@@ -42,6 +42,15 @@ public class EnemeyAI : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Bullet")
+            {
+                 TakeDamage(10);
+            }
+        }
+
     }
     private void Patroling()
     {
@@ -81,9 +90,10 @@ public class EnemeyAI : MonoBehaviour
         {
             playerHealth.Damage(10f);
             animator.SetBool("isAttacking", true);
-            
+
             ///Attack code here
             ///
+         
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
