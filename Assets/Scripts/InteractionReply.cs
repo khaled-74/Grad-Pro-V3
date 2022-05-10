@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class InteractionReply : Interactable
 {
     [SerializeField] private GameObject actor;
-    int i = 1;
+    int i = 1,j=1;
     //Scene currentScene = SceneManager.GetActiveScene();
     //string sceneName = currentScene.name;
     public override void OnFocus()
@@ -53,11 +53,16 @@ public class InteractionReply : Interactable
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("1St meeting W ISIS", actor.transform, gameObject.transform);
                     i++;
                 }
-                else if (SceneManager.GetSceneByName("ACT3").isLoaded && i > 1)
+                else if(SceneManager.GetSceneByName("ACT4.5").isLoaded && j == 1)
+                {
+                    PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Isis 2nd conv", actor.transform, gameObject.transform);
+                    j++;
+                }
+                else if (j > 1 || i > 1)
                 {
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Tried Isis again", actor.transform, gameObject.transform);
                 }
-                
+
                 break;
 
         }

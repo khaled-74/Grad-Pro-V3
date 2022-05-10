@@ -20,11 +20,11 @@ public class LevelLoader : MonoBehaviour
        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void ForRa()
-    {
-        SceneManager.LoadScene("Act 3");
-        //player.transform.position = newPos;
-    }
+    //public void ForRa()
+    //{
+    //    SceneManager.LoadScene("Act 3");
+    //    //player.transform.position = newPos;
+    //}
 
     IEnumerator LoadLevel(int levelIndex)
     {

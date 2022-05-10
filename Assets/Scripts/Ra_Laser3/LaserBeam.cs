@@ -70,7 +70,7 @@ public class LaserBeam
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
             PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Conv W RA", actor.transform);
-            loader.ForRa();
+            loader.LoadNextLevel();
            // SceneManager.LoadScene("Act 3");
         }
         else
