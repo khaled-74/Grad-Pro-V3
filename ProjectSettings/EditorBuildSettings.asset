@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act4_Ra_puzzle.unity
     guid: 62ebc7ad726a223419c2213d10b6af5d
+  - enabled: 1
+    path: Assets/Scenes/ACT4.5.unity
+    guid: 1aa98dd92de720f4ea81c22268649366
+  - enabled: 1
+    path: Assets/Scenes/ACT5.unity
+    guid: 583dce06350c83849a1558e495bae5b6
   m_configObjects: {}
