@@ -7,6 +7,9 @@ public class PauseMenuKhaled : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject dialogueUI;
+    public bool isDialogueActive;
+
 
     void Update()
     {
@@ -29,14 +32,29 @@ public class PauseMenuKhaled : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        gameIsPaused = false; 
+        gameIsPaused = false;
+
+        //to lock in the centre of window
+        Cursor.lockState = CursorLockMode.Locked;
+        //to hide the curser
+        Cursor.visible = false;
+
+
+       // dialogueUI.SetActive(true);
     }
 
     void Pause()
     {
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;  
         gameIsPaused = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+     //   dialogueUI?.SetActive(false);
+
     }
     public void LoadMenu() 
     {
@@ -45,6 +63,7 @@ public class PauseMenuKhaled : MonoBehaviour
 
     public void BackTOMainMenu()
     {
+
         SceneManager.LoadScene(0);
     }
 
