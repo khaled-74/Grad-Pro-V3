@@ -6,8 +6,8 @@ public class BulletDestroy : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
-     //   Debug.Log("Touch");
+       // Destroy(gameObject);
+       Debug.Log("Touch");
     }
 
 }
