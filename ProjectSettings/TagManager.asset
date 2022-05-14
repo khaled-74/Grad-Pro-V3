@@ -17,6 +17,8 @@ TagManager:
   - wall
   - Object1
   - bullet
+  - Object2
+  - Object
   layers:
   - Default
   - TransparentFX
