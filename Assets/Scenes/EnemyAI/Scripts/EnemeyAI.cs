@@ -43,13 +43,6 @@ public class EnemeyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.tag == "Bullet")
-            {
-                 TakeDamage(10);
-            }
-        }
 
     }
     private void Patroling()
@@ -131,6 +124,14 @@ public class EnemeyAI : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            TakeDamage(100);
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -140,3 +141,4 @@ public class EnemeyAI : MonoBehaviour
     }
  
 }
+
