@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
+
+
 public class DoorAnimated : MonoBehaviour
 {
       [SerializeField] private List<Key.keyType> _keyType;
