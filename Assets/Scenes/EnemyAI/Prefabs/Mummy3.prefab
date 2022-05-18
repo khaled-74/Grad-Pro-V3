@@ -248,6 +248,8 @@ GameObject:
   - component: {fileID: 2100532461147437262}
   - component: {fileID: 2100532461147437260}
   - component: {fileID: 2100532461147437259}
+  - component: {fileID: 1461816333}
+  - component: {fileID: 1461816334}
   m_Layer: 0
   m_Name: Mummy3
   m_TagString: Untagged
@@ -341,6 +343,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!64 &1461816333
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290280146974045603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -992706089771071536, guid: 9b00a6889b801e74592a060d37525f43, type: 3}
+--- !u!65 &1461816334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290280146974045603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.8379135, z: 1}
+  m_Center: {x: 0, y: 1.9189568, z: 0}
 --- !u!1 &1307055134492169976
 GameObject:
   m_ObjectHideFlags: 0

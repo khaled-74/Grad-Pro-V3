@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 78f9bc25c97422642992f412ed4deb46
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -5187248419258813496
+    second: Plane|PlaneAction
   externalObjects: {}
   materials:
     materialImportMode: 2
