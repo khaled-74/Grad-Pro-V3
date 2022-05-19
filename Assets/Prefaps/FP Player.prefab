@@ -265,7 +265,7 @@ RectTransform:
   - {fileID: 1561031642}
   - {fileID: 7687860326356667410}
   m_Father: {fileID: 4531665314387595409}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -479,6 +479,7 @@ MonoBehaviour:
   gunContainer: {fileID: 5507832831073581609}
   fpsCamera: {fileID: 4531665312530313417}
   equiped: 0
+  stashed: 1
 --- !u!1 &4531665312530313420
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +515,7 @@ Transform:
   - {fileID: 1468776103728930783}
   - {fileID: 5507832831073581609}
   m_Father: {fileID: 4531665314387595409}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4531665312530313422
 Camera:
@@ -627,7 +628,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_Children: []
   m_Father: {fileID: 4531665314387595409}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4531665312684785872
 MeshFilter:
@@ -706,7 +707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4531665314387595409}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4531665314387595415
 GameObject:
@@ -750,10 +751,10 @@ Transform:
   m_LocalPosition: {x: 24, y: 1.5, z: -148.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2087700776}
   - {fileID: 4531665312684785878}
   - {fileID: 4531665312530313417}
   - {fileID: 4531665312712030889}
-  - {fileID: 2087700776}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 326.639, z: 0}
@@ -816,6 +817,8 @@ MonoBehaviour:
   crouchHeight: 1
   standingHeight: 3.8
   timeToCrouch: 0.25
+  crouchAudioSource: {fileID: 0}
+  v2Clip: []
   crouchCenter: {x: 0, y: 1, z: 0}
   standingCenter: {x: 0, y: 0, z: 0}
   walkBobSpeed: 15
@@ -829,6 +832,7 @@ MonoBehaviour:
   baseStepSpeed: 0.5
   crouchStepMultiplier: 1.5
   sprintStepMultiplier: 0.6
+  camLength: 12
   footstepsAudioSource: {fileID: 4531665314387595411}
   woodClips:
   - {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
@@ -1635,14 +1639,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a8f393ea9df344583b022831f75d9c, type: 3}
---- !u!4 &843116304 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400018, guid: c4a8f393ea9df344583b022831f75d9c, type: 3}
-  m_PrefabInstance: {fileID: 843511170}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &843543344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100018, guid: c4a8f393ea9df344583b022831f75d9c, type: 3}
+  m_PrefabInstance: {fileID: 843511170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &843116304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400018, guid: c4a8f393ea9df344583b022831f75d9c, type: 3}
   m_PrefabInstance: {fileID: 843511170}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &1795383260
@@ -2047,6 +2051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cce17a118dbd4114ab1ed547ebd93845, type: 3}
+--- !u!224 &2500892817082444305 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7303160454869603085, guid: cce17a118dbd4114ab1ed547ebd93845, type: 3}
+  m_PrefabInstance: {fileID: 5183358917914704156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2305156887669234984 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6346542197277025332, guid: cce17a118dbd4114ab1ed547ebd93845, type: 3}
@@ -2058,8 +2067,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &2500892817082444305 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7303160454869603085, guid: cce17a118dbd4114ab1ed547ebd93845, type: 3}
-  m_PrefabInstance: {fileID: 5183358917914704156}
-  m_PrefabAsset: {fileID: 0}
