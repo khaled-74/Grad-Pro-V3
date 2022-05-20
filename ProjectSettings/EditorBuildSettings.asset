@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI/Menus/MainMenu.unity
-    guid: e91c174fc715f4545a20336ee5a3fe52
+    path: Assets/Scenes/UI/Menus/MainMenu 1.unity
+    guid: 8f81d71e5c1cb5341a6020c31e98f002
   - enabled: 1
     path: Assets/Scenes/ACT1.unity
     guid: 8b5627a824517524eb44dec2d097ba20
@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ACT3.unity
     guid: f5d90bd303e31ef40a2b83eeb1568bcc
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Act4_Ra_puzzle.unity
     guid: 62ebc7ad726a223419c2213d10b6af5d
@@ -33,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Horus/Scenes/HorusPuzzle.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/New Scene.unity
+    path: Assets/Scenes/Act7.unity
     guid: 9fa8e33e92e54e44986420f31bbf4320
   m_configObjects: {}
