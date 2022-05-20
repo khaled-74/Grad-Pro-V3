@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class newMechanic : MonoBehaviour
+//not needed
+public class newMechanic2Old : MonoBehaviour
 {
     public float speed;
     [SerializeField] private bool selected = false;
-    [SerializeField] private GameObject slot;
 
+    [SerializeField] private GameObject slot;
     private Vector3 og;
     public Rigidbody rb;
     private Renderer rendererr;
@@ -20,23 +20,23 @@ public class newMechanic : MonoBehaviour
         og = trans.position;
         rb = gameObject.GetComponent<Rigidbody>();
     }
-
-     void Update()
+    void Update()
     {
+
         if (selected)
         {
             var rayOrigin = trans.position;
             var rayDirection = trans.TransformDirection(Vector3.forward);
             RaycastHit hitInfo;
-
             if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
             {
-                //Debug.DrawLine(rayOrigin, hitInfo.point, Color.black);
+                Debug.DrawLine(rayOrigin, hitInfo.point, Color.black);
                 if (hitInfo.collider.name != slot.name)
                 {
                     if (Input.GetKeyDown(KeyCode.W))
                     {
                         rb.velocity = new Vector3(0, 1 * Time.deltaTime * speed, 0);
+                        Debug.Log("up");
                     }
 
                     if (Input.GetKeyDown(KeyCode.S))
@@ -56,22 +56,22 @@ public class newMechanic : MonoBehaviour
                 else
                 {
                     snapped = true;
-                    Debug.Log("Win"); 
+                    Debug.Log("Win");
                 }
             }
         }
 
         if (Input.GetMouseButton(0))
         {
-            Debug.Log("saw the click");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
-                Debug.Log("Raycast");
-                if (hitInfo.collider.gameObject.tag == this.tag)
+                if (hitInfo.collider.gameObject.tag == "Object2")
                 {
-                    { Debug.Log(gameObject.name+" selected"); }
+
+                    { Debug.Log("Oject2 selected"); }
+
                     selected = true;
                 }
 
@@ -84,14 +84,14 @@ public class newMechanic : MonoBehaviour
         {
             trans.position = og;
         }
-     }
+    }
     private void OnMouseEnter()
     {
         rendererr.material.color = Color.red;
+
     }
     private void OnMouseExit()
     {
         rendererr.material.color = Color.yellow;
     }
-
 }
