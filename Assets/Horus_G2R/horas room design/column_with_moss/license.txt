@@ -1,0 +1,11 @@
+Model Information:
+* title:	Column with moss
+* source:	https://sketchfab.com/3d-models/column-with-moss-e176338a2da146958c914664a7777b84
+* author:	Lisov1k (https://sketchfab.com/Lisov1k)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Column with moss" (https://sketchfab.com/3d-models/column-with-moss-e176338a2da146958c914664a7777b84) by Lisov1k (https://sketchfab.com/Lisov1k) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
