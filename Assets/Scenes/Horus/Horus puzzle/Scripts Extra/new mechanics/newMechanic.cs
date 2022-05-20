@@ -7,7 +7,8 @@ public class newMechanic : MonoBehaviour
     public float speed;
     [SerializeField] private bool selected = false;
     [SerializeField] private GameObject slot;
-
+    [SerializeField] private AudioSource snapAudioSource = default;//<-------
+    [SerializeField] private AudioClip[] v1Clip = default;//<-------
     private Vector3 og;
     public Rigidbody rb;
     private Renderer rendererr;
@@ -23,17 +24,20 @@ public class newMechanic : MonoBehaviour
 
      void Update()
     {
-        if (selected)
+        if (selected && !snapped)
         {
+            Debug.Log("update selected");
             var rayOrigin = trans.position;
             var rayDirection = trans.TransformDirection(Vector3.forward);
             RaycastHit hitInfo;
-
+            
             if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
             {
-                //Debug.DrawLine(rayOrigin, hitInfo.point, Color.black);
-                if (hitInfo.collider.name != slot.name)
+                Debug.Log("ray");
+                Debug.DrawLine(rayOrigin, hitInfo.point, Color.black);
+                if (hitInfo.collider.name !=slot.name /*&& hitInfo.collider.gameObject.tag == "Bounds"*/)
                 {
+                    Debug.Log("Moving");
                     if (Input.GetKeyDown(KeyCode.W))
                     {
                         rb.velocity = new Vector3(0, 1 * Time.deltaTime * speed, 0);
@@ -53,11 +57,14 @@ public class newMechanic : MonoBehaviour
                         rb.velocity = new Vector3(-1 * Time.deltaTime * speed, 0, 0);
                     }
                 }
-                else
+                else if (hitInfo.collider.name == slot.name)
                 {
                     snapped = true;
-                    Debug.Log("Win"); 
+                    snapAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);//<-------
+                    Debug.Log("Win");
                 }
+                //else
+                //    Debug.Log("out of bounds");
             }
         }
 
@@ -83,6 +90,7 @@ public class newMechanic : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             trans.position = og;
+            snapped = false;
         }
      }
     private void OnMouseEnter()
