@@ -7,9 +7,7 @@ public class PauseMenuKhaled : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject dialogueUI;
-    public bool isDialogueActive;
-
+    public GameObject optionMenuUI;
 
     void Update()
     {
@@ -19,6 +17,11 @@ public class PauseMenuKhaled : MonoBehaviour
             {
                 Cursor.visible = false;
                 Resume();
+
+                if (optionMenuUI.activeSelf)
+                {
+                    optionMenuUI.SetActive(false);
+                }
             }
             else
             {
@@ -63,7 +66,7 @@ public class PauseMenuKhaled : MonoBehaviour
 
     public void BackTOMainMenu()
     {
-
+        pauseMenuUI.SetActive(false);
         SceneManager.LoadScene(0);
     }
 
