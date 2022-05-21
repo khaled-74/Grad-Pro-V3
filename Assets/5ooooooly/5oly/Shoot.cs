@@ -14,6 +14,8 @@ public class Shoot : MonoBehaviour
     //ammo system
     [SerializeField] int defaultAmmo = 6;
     [SerializeField] int currentAmmo;
+    [SerializeField] Transform bulletPivot;
+
 
     bool needReload;
 
@@ -57,8 +59,8 @@ public class Shoot : MonoBehaviour
             aS.Play();
 
             Rigidbody hitPlayer;
-            hitPlayer = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-            hitPlayer.velocity = transform.TransformDirection(Vector3.forward * 100);
+            hitPlayer = Instantiate(projectilePrefab, bulletPivot.position, bulletPivot.rotation) as Rigidbody;
+            hitPlayer.velocity = bulletPivot.TransformDirection(Vector3.forward * 100);
             //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
 
             for (var i = 0; i < Input.touchCount; ++i)
