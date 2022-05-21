@@ -69,9 +69,10 @@ public class LaserBeam
             Debug.Log("You win");
             laserIndices.Add(hitInfo.point);
             UpdateLaser();
-            PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Conv W RA", actor.transform);
-            loader.LoadNextLevel();
-           // SceneManager.LoadScene("Act 3");
+
+            // PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Conv W RA", actor.transform);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // SceneManager.LoadScene("Act 3");
         }
         else
         {
