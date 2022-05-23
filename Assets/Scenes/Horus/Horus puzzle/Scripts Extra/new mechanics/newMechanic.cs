@@ -31,7 +31,7 @@ public class newMechanic : MonoBehaviour
             var rayDirection = trans.TransformDirection(Vector3.forward);
             RaycastHit hitInfo;
             
-            if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
+            if (Physics.Raycast(rayOrigin,rayDirection, out hitInfo))
             {
                 Debug.Log("ray");
                 Debug.DrawLine(rayOrigin, hitInfo.point, Color.black);
