@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class HSlots : MonoBehaviour
 {
     [SerializeField] List<GameObject> cubes;
@@ -24,7 +24,8 @@ public class HSlots : MonoBehaviour
         {
             if (allsnaped(cubes))
             {
-                loader.LoadNextLevel();
+                SceneManager.LoadScene("ACT6");
+                //loader.LoadNextLevel();
             }
         }
     }

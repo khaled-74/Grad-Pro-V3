@@ -57,7 +57,7 @@ public class newMechanic : MonoBehaviour
                         rb.velocity = new Vector3(-1 * Time.deltaTime * speed, 0, 0);
                     }
                 }
-                else if (hitInfo.collider.name == slot.name)
+                else/* if (hitInfo.collider.name == slot.name)*/
                 {
                     snapped = true;
                     snapAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);//<-------
