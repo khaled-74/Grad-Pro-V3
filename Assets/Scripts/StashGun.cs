@@ -46,7 +46,7 @@ public class StashGun : MonoBehaviour
         { Debug.Log("second if is true"); Unequip(); Debug.Log("out of unequip"); } 
     }
 
-    private void Equip()
+    public void Equip()
     {
         Debug.Log("in equip");
         equiped = true;
@@ -66,7 +66,7 @@ public class StashGun : MonoBehaviour
         
     }
 
-    private void Unequip()
+    public void Unequip()
     {
         Debug.Log("in unequip");
         equiped = false;
