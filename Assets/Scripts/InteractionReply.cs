@@ -8,8 +8,20 @@ public class InteractionReply : Interactable
 {
     [SerializeField] private GameObject actor;
     int i = 1,j=1;
+    static int entry = 0;
+    LevelLoader level;
+    //HSlots check = new HSlots();
     //Scene currentScene = SceneManager.GetActiveScene();
     //string sceneName = currentScene.name;
+    
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "ACT6")
+        {
+            entry++;
+            level = LevelLoader.FindObjectOfType<LevelLoader>();
+        }
+    }
     public override void OnFocus()
     {
         switch (gameObject.name)
@@ -62,8 +74,24 @@ public class InteractionReply : Interactable
                 {
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Tried Isis again", actor.transform, gameObject.transform);
                 }
-
                 break;
+            case "horas":
+                if (entry > 1)
+                {
+                    Debug.Log("entry was true");
+                    PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Horus", actor.transform, gameObject.transform);
+                   // Invoke("level.horusRoom", 180f);
+                    level.horusRoom();
+                    //SceneManager.LoadScene("Act7");
+                }
+                else 
+                {
+                    Debug.Log("entry is false");
+                   // if()
+                }
+                   
+                break;
+                
 
         }
         //if (gameObject.name == "Stand")

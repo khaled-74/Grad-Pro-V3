@@ -80,6 +80,7 @@ public class newMechanic : MonoBehaviour
                 {
                     { Debug.Log(gameObject.name+" selected"); }
                     selected = true;
+                   // snapAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);//<-------
                 }
 
                 else { selected = false; }
