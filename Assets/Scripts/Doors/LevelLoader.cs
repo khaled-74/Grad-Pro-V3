@@ -7,8 +7,8 @@ public class LevelLoader : MonoBehaviour
 {
     [SerializeField]public Animator transition;
     [SerializeField]public float transitionTime = 1f;
-   // [SerializeField] public GameObject player = default;
-
+    // [SerializeField] public GameObject player = default;
+   // public bool entry = false;
     //// Update is called once per frame
     //void Update()
     //{
@@ -17,7 +17,9 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-       StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //if (SceneManager.GetActiveScene().name == "HorusPuzzle")
+        //    entry = true;
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     //public void ForRa()
@@ -25,12 +27,20 @@ public class LevelLoader : MonoBehaviour
     //    SceneManager.LoadScene("Act 3");
     //    //player.transform.position = newPos;
     //}
-
-    IEnumerator LoadLevel(int levelIndex)
+    public void horusRoom()
     {
+       // if(Input.GetKeyDown(KeyCode.X))
+       
+            StartCoroutine(LoadLevel(10,90f));
+    }
+
+    IEnumerator LoadLevel(int levelIndex , float delay = 0.0f)
+    {
+        if (delay != 0)
+            yield return new WaitForSeconds(delay);
         //Play animation
         transition.SetTrigger("Start");
-
+        
         //wait
         yield return new WaitForSeconds(transitionTime);
 
