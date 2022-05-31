@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564fe6772725f35408d7d21ca256a8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 4392149188623745078}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2

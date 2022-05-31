@@ -117,13 +117,19 @@ public class EnemeyAI : MonoBehaviour
     public void TakeDamage(int damage) 
     {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) 
+        {
+            Invoke(nameof(DestroyEnemy), 0.5f);    
+            
+        }
+
     }
     private void DestroyEnemy()
     {
         Destroy(gameObject);
     }
 
+    //enemy taking damage
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "bullet")

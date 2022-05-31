@@ -67,10 +67,17 @@ public class Health : MonoBehaviour
     public void Damage(float damagePoints)
     {
         if (health > 0)
+        {
             health -= damagePoints;
+            if (health == 0)
+            {
+                //Died condition 
+            }
+        }
         var color = m_GotHitScreen.GetComponent<Image>().color;
         color.a = 0.8f;
         m_GotHitScreen.GetComponent<Image>().color = color;
+
     }
     public void Heal(float healingPoints)
     {
