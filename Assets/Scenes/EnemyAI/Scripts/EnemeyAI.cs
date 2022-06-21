@@ -119,7 +119,11 @@ public class EnemeyAI : MonoBehaviour
         health -= damage;
         if (health <= 0) 
         {
-            Invoke(nameof(DestroyEnemy), 0.5f);    
+            //Invoke(nameof(DestroyEnemy), 0.5f);    
+            animator.SetBool("isDead",true);
+           // GetComponent<CapsuleCollider>().enabled = false;
+           GetComponent<EnemeyAI>().enabled = false;
+
             
         }
 
