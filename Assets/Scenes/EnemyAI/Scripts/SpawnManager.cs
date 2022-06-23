@@ -4,21 +4,42 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] zombieType;
-    public GameObject[] zombieSpawn;
-    public int zombieIndex;
+    public GameObject[] mummyType;
+
+    public Transform miniPos;
+    public Transform maxPos;
+
+    public float startDelay = 2;
+    public float spawnInterval = 1.5f;
+ 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomMummy", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K)) 
-        {
-            Instantiate(zombieType[zombieIndex], new Vector3(0,0,0),zombieType[zombieIndex].transform.rotation);
-        }
+
     }
+
+    void SpawnRandomMummy()
+    {
+        //Random generatw mummy index and spawn position 
+
+        float xpos = Random.Range(miniPos.position.x, maxPos.position.x);
+        float zpos = Random.Range(miniPos.position.z, maxPos.position.z);
+
+        int mummyIndex = Random.Range(0, mummyType.Length);
+        Vector3 spawnPos = new Vector3(xpos, 0, zpos);
+        Instantiate(mummyType[mummyIndex], spawnPos, mummyType[mummyIndex].transform.rotation);
+
+    }
+
 }
+
+
+
+//Vector3 spawnPos = new Vector3(Random.Range())
