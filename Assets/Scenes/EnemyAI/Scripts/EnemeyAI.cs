@@ -121,8 +121,9 @@ public class EnemeyAI : MonoBehaviour
         {
             //Invoke(nameof(DestroyEnemy), 0.5f);    
             animator.SetBool("isDead",true);
-           // GetComponent<CapsuleCollider>().enabled = false;
+           GetComponent<CapsuleCollider>().enabled = false;
            GetComponent<EnemeyAI>().enabled = false;
+           GetComponent<NavMeshAgent>().enabled = false;
 
             
         }
