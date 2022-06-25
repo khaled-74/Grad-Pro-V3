@@ -70,5 +70,14 @@ public class PauseMenuKhaled : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void BackToScene() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        //to lock in the centre of window
+        Cursor.lockState = CursorLockMode.Locked;
+        //to hide the curser
+        Cursor.visible = false;
+    }
 
 }

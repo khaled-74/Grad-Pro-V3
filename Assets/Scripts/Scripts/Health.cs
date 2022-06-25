@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Health : MonoBehaviour
 {
     public Text healthText;
     public Image healthBar;//, ringHealthBar;
                            // public Image[] healthPoints;
+
+    public GameObject looseMenuUI;
 
     public   float health; 
     float maxHealth = 100f;
@@ -71,6 +74,11 @@ public class Health : MonoBehaviour
             health -= damagePoints;
             if (health == 0)
             {
+                looseMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 //Died condition 
             }
         }
