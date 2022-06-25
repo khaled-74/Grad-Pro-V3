@@ -14330,10 +14330,6 @@ PrefabInstance:
       propertyPath: m_GotHitScreen
       value: 
       objectReference: {fileID: 321644818}
-    - target: {fileID: 4774925884685890746, guid: 1cfc7f44bf19320428be54b63dcc9cc3, type: 3}
-      propertyPath: conversation
-      value: RA's room
-      objectReference: {fileID: 0}
     - target: {fileID: 4774925884812437789, guid: 1cfc7f44bf19320428be54b63dcc9cc3, type: 3}
       propertyPath: ammoCounter
       value: 
