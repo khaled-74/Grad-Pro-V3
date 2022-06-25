@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class InteractionReply : Interactable
 {
     [SerializeField] private GameObject actor;
-    int i = 1,j=1;
-    static int entry = 0;
+    int i = 1, j=1, t=1;
+   // static int entry = 0;
     LevelLoader level;
     //HSlots check = new HSlots();
     //Scene currentScene = SceneManager.GetActiveScene();
@@ -18,7 +18,7 @@ public class InteractionReply : Interactable
     {
         if (SceneManager.GetActiveScene().name == "ACT6")
         {
-            entry++;
+           // entry++;
             level = LevelLoader.FindObjectOfType<LevelLoader>();
         }
     }
@@ -70,13 +70,18 @@ public class InteractionReply : Interactable
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Isis 2nd conv", actor.transform, gameObject.transform);
                     j++;
                 }
-                else if (j > 1 || i > 1)
+                else if (SceneManager.GetSceneByName("ACT5.5").isLoaded && t == 1)
+                {
+                    PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Isis after act5", actor.transform, gameObject.transform);
+                    t++;
+                }
+                else if (j > 1 || i > 1 || t>1)
                 {
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Tried Isis again", actor.transform, gameObject.transform);
                 }
                 break;
             case "horas":
-                if (entry > 1)
+                if (level.checkEntry())
                 {
                     Debug.Log("entry was true");
                     PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Horus", actor.transform, gameObject.transform);
@@ -84,9 +89,10 @@ public class InteractionReply : Interactable
                     level.horusRoom();
                     //SceneManager.LoadScene("Act7");
                 }
-                else 
+                else /*(entry == 0)*/
                 {
                     Debug.Log("entry is false");
+                    PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Horusb4Puzzle", actor.transform, gameObject.transform);
                    // if()
                 }
                    

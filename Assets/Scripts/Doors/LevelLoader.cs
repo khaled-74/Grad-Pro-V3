@@ -8,12 +8,31 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]public Animator transition;
     [SerializeField]public float transitionTime = 1f;
     // [SerializeField] public GameObject player = default;
-   // public bool entry = false;
+    // public bool entry = false;
     //// Update is called once per frame
     //void Update()
     //{
-        
+
     //}
+    public static int entry = 0;
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "HorusPuzzle")
+        { 
+            entry = 1;
+          //  checkEntry(entry);
+        }
+    }
+
+    public bool checkEntry()
+    {
+        if (entry == 0)
+            return false;
+        else
+            return true;
+    }
+
+
 
     public void LoadNextLevel()
     {
@@ -31,7 +50,7 @@ public class LevelLoader : MonoBehaviour
     {
        // if(Input.GetKeyDown(KeyCode.X))
        
-            StartCoroutine(LoadLevel(10,90f));
+            StartCoroutine(LoadLevel(10,10f));
     }
 
     IEnumerator LoadLevel(int levelIndex , float delay = 0.0f)
