@@ -914,6 +914,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4392149188623745077, guid: d7ac4167192a1664392c9c7e57294087, type: 3}
+      propertyPath: dmg
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392149188623745077, guid: d7ac4167192a1664392c9c7e57294087, type: 3}
       propertyPath: agent
       value: 
       objectReference: {fileID: 389024451}
@@ -6892,6 +6896,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 264941444}
     m_Modifications:
+    - target: {fileID: 6954629902701912599, guid: 32bed1b9b160ef54a8bf4981a580b911, type: 3}
+      propertyPath: dmg
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6954629902701912599, guid: 32bed1b9b160ef54a8bf4981a580b911, type: 3}
       propertyPath: player
       value: 
