@@ -31,9 +31,9 @@ public class SpawnManager : MonoBehaviour
 
         float xpos = Random.Range(miniPos.position.x, maxPos.position.x);
         float zpos = Random.Range(miniPos.position.z, maxPos.position.z);
-
+        float ypos = Random.Range(miniPos.position.y, maxPos.position.y);
         int mummyIndex = Random.Range(0, mummyType.Length);
-        Vector3 spawnPos = new Vector3(xpos, 0, zpos);
+        Vector3 spawnPos = new Vector3(xpos, ypos, zpos);
         Instantiate(mummyType[mummyIndex], spawnPos, mummyType[mummyIndex].transform.rotation);
 
     }

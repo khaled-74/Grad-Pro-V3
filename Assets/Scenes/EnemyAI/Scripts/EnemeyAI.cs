@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemeyAI : MonoBehaviour
 {
+    public float dmg=10f;
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
@@ -81,7 +82,7 @@ public class EnemeyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            playerHealth.Damage(10f);
+            playerHealth.Damage(dmg);
             animator.SetBool("isAttacking", true);
 
             ///Attack code here

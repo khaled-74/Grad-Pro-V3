@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Health : MonoBehaviour
 {
     public Text healthText;
     public Image healthBar;//, ringHealthBar;
                            // public Image[] healthPoints;
+
+    public GameObject looseMenuUI;
 
     public   float health; 
     float maxHealth = 100f;
@@ -34,7 +37,7 @@ public class Health : MonoBehaviour
             if (m_GotHitScreen.GetComponent<Image>().color.a > 0) 
             {
                 var color = m_GotHitScreen.GetComponent<Image>().color;
-                color.a -= 0.001f;
+                color.a -= 0.0015f;
                 m_GotHitScreen.GetComponent<Image>().color = color;
             }
         }
@@ -71,6 +74,11 @@ public class Health : MonoBehaviour
             health -= damagePoints;
             if (health == 0)
             {
+                looseMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 //Died condition 
             }
         }
