@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemeyAI : MonoBehaviour
 {
+    public AudioSource audioSource;
     public float dmg=10f;
     public NavMeshAgent agent;
     public Transform player;
@@ -125,8 +126,9 @@ public class EnemeyAI : MonoBehaviour
            GetComponent<CapsuleCollider>().enabled = false;
            GetComponent<EnemeyAI>().enabled = false;
            GetComponent<NavMeshAgent>().enabled = false;
+           Destroy(audioSource);
 
-            
+
         }
 
     }
