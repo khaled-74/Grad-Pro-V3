@@ -1243,6 +1243,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 399369289, guid: 05bc1ef1d7d7ac744b865c24c152d274, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140297334, guid: 05bc1ef1d7d7ac744b865c24c152d274, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 345739682109778405, guid: 05bc1ef1d7d7ac744b865c24c152d274, type: 3}
       propertyPath: m_Name
       value: Dialogue Manager
@@ -7347,6 +7355,10 @@ PrefabInstance:
     - target: {fileID: 5041464440771234985, guid: 50dfde9440e68004dbeea2dcd97a2233, type: 3}
       propertyPath: defaultAmmo
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041464440897917198, guid: 50dfde9440e68004dbeea2dcd97a2233, type: 3}
+      propertyPath: conversation
+      value: Act7
       objectReference: {fileID: 0}
     - target: {fileID: 8869088109249677376, guid: 50dfde9440e68004dbeea2dcd97a2233, type: 3}
       propertyPath: m_Name
