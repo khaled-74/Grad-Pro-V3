@@ -2431,7 +2431,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Isis_1)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 10
@@ -4556,7 +4556,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Isis_2)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 16
@@ -5847,7 +5847,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Isis_3)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 22
