@@ -50,7 +50,7 @@ public class LevelLoader : MonoBehaviour
     {
        // if(Input.GetKeyDown(KeyCode.X))
        
-            StartCoroutine(LoadLevel(10,10f));
+            StartCoroutine(LoadLevel(12,10f));
     }
 
     IEnumerator LoadLevel(int levelIndex , float delay = 0.0f)

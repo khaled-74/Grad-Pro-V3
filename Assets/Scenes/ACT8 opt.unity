@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: ammoCounter
       value: 
       objectReference: {fileID: 1714994290}
+    - target: {fileID: 5041464440897917198, guid: 50dfde9440e68004dbeea2dcd97a2233, type: 3}
+      propertyPath: conversation
+      value: Act 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8869088109249677376, guid: 50dfde9440e68004dbeea2dcd97a2233, type: 3}
       propertyPath: m_Name
       value: FP Player vr.3
