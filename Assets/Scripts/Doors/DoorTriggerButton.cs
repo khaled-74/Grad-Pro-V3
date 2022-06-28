@@ -6,9 +6,11 @@ public class DoorTriggerButton : Interactable
 {
     [SerializeField] private DoorAnimated door;
     [SerializeField] public GameObject actor;
+    int i = 0;
     public override void OnFocus()
     {
-        if (SceneManager.GetSceneByName("ACT5").isLoaded)
+        i++;
+        if (SceneManager.GetSceneByName("ACT5").isLoaded && i==1)
         {
             PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Finished Maze", actor.transform);
         }

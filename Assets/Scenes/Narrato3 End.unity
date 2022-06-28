@@ -712,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loader: {fileID: 1766705997}
   openAudioSource: {fileID: 1399040356}
-  NarratorClip: {fileID: 8300000, guid: 718af9c68b9822d4aaff5a12e229fa88, type: 3}
+  NarratorClip: {fileID: 8300000, guid: 8664883b1aec08f44b125dcd8bbb5db3, type: 3}
   volume: 0.7
 --- !u!82 &1399040356
 AudioSource:

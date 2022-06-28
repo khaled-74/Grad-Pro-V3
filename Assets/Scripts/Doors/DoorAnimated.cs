@@ -27,7 +27,8 @@ public class DoorAnimated : MonoBehaviour
         {
             //animator.SetBool("Open", true);
             //isOpen = true;
-            pickUpAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);
+            if(v1Clip.Length !=0)
+                pickUpAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);
             loader.LoadNextLevel();//new 2
             Debug.Log("New Scene");
         }
