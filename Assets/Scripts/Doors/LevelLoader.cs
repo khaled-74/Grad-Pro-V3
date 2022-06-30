@@ -38,6 +38,7 @@ public class LevelLoader : MonoBehaviour
     {
         //if (SceneManager.GetActiveScene().name == "HorusPuzzle")
         //    entry = true;
+        Debug.Log("loadlevel works");
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -55,6 +56,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex , float delay = 0.0f)
     {
+        Debug.Log("in coru");
         if (delay != 0)
             yield return new WaitForSeconds(delay);
         //Play animation
@@ -62,8 +64,9 @@ public class LevelLoader : MonoBehaviour
         
         //wait
         yield return new WaitForSeconds(transitionTime);
-
+        Debug.Log("b4 loadscene");
         //Load scene
         SceneManager.LoadScene(levelIndex);
+        Debug.Log("after loadscese");
     }
 }

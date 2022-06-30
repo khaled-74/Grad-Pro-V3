@@ -16,7 +16,7 @@ public class InteractionReply : Interactable
     
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "ACT6")
+        if (SceneManager.GetActiveScene().name == "ACT6" || SceneManager.GetActiveScene().name == "ACT8 opt")
         {
            // entry++;
             level = LevelLoader.FindObjectOfType<LevelLoader>();
@@ -40,9 +40,13 @@ public class InteractionReply : Interactable
 
             case "Ra":
                 break;
+            case "Hatshepsut's coffin":
+                PixelCrushers.DialogueSystem.DialogueManager.BarkString("Interact with", gameObject.transform, actor.transform);
+                break;
             default:
                 PixelCrushers.DialogueSystem.DialogueManager.BarkString("Press C to interact with", gameObject.transform, actor.transform);
                 break;
+                
         }
         
     }
@@ -97,7 +101,10 @@ public class InteractionReply : Interactable
                 }
                    
                 break;
-                
+
+            case "Hatshepsut's coffin":
+                level.LoadNextLevel();
+                break;
 
         }
         //if (gameObject.name == "Stand")

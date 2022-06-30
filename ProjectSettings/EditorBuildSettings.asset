@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act7.unity
     guid: 9fa8e33e92e54e44986420f31bbf4320
+  - enabled: 1
+    path: Assets/Scenes/ACT8 opt.unity
+    guid: 354c37061c0d50049a2dda76db9e2d1c
+  - enabled: 1
+    path: Assets/Scenes/Narrato3 End.unity
+    guid: 5df6a2f795f1af04190155e1ddcb99dd
   m_configObjects: {}

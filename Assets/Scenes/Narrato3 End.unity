@@ -227,7 +227,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 5110a26d5eb0dc340ae7c42713aa18fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 73bc0fd59de092d40bff1ec15d3af481, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.295
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
   loader: {fileID: 1766705997}
   openAudioSource: {fileID: 1399040356}
   NarratorClip: {fileID: 8300000, guid: 8664883b1aec08f44b125dcd8bbb5db3, type: 3}
-  volume: 0.7
+  volume: 1
 --- !u!82 &1399040356
 AudioSource:
   m_ObjectHideFlags: 0
