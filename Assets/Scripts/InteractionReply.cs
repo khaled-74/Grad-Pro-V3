@@ -55,6 +55,12 @@ public class InteractionReply : Interactable
     {
         switch (gameObject.name)
         {
+            case "Bust":
+                PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Bust", actor.transform);
+                break;
+            case "rosetta":
+                PixelCrushers.DialogueSystem.DialogueManager.StartConversation("Rosetta", actor.transform);
+                break;
 
             case "Stand":
                 PixelCrushers.DialogueSystem.DialogueManager.StartConversation("sees puzzle", actor.transform);
