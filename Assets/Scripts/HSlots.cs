@@ -7,6 +7,12 @@ public class HSlots : MonoBehaviour
     [SerializeField] List<GameObject> cubes;
     [SerializeField] private LevelLoader loader;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     //public static bool entry = false;
     public bool allsnaped(List<GameObject> cubes)
     {
@@ -16,6 +22,8 @@ public class HSlots : MonoBehaviour
             if (!snap.snapped)
                 return false;
         }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         return true;
     }
 
@@ -26,6 +34,7 @@ public class HSlots : MonoBehaviour
             if (allsnaped(cubes))
             {
                 //entry = true;
+                
                 SceneManager.LoadScene("ACT6");
                 //loader.LoadNextLevel();
             }
