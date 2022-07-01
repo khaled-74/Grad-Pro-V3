@@ -2931,6 +2931,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05bc1ef1d7d7ac744b865c24c152d274, type: 3}
+--- !u!1 &844611363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 399369288, guid: 05bc1ef1d7d7ac744b865c24c152d274, type: 3}
+  m_PrefabInstance: {fileID: 844611362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &948792026
 Mesh:
   m_ObjectHideFlags: 0
@@ -4058,6 +4063,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1648705112}
+    - target: {fileID: 3986543143550996155, guid: 1cfc7f44bf19320428be54b63dcc9cc3, type: 3}
+      propertyPath: looseMenuUI
+      value: 
+      objectReference: {fileID: 844611363}
     - target: {fileID: 3986543143550996155, guid: 1cfc7f44bf19320428be54b63dcc9cc3, type: 3}
       propertyPath: m_GotHitScreen
       value: 

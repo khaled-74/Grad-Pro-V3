@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class newMechanic : MonoBehaviour
 {
     public float speed;
@@ -61,7 +61,9 @@ public class newMechanic : MonoBehaviour
                 {
                     snapped = true;
                     snapAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);//<-------
-                    Debug.Log("Win");
+                                                                                            // Debug.Log("Win");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
                 }
                 //else
                 //    Debug.Log("out of bounds");
