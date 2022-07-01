@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
     private void OnEnd() 
     {
         //End Time , if we want to do something 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 }
