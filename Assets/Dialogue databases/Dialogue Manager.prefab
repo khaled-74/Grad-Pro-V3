@@ -9399,6 +9399,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8937506649426947208, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 9155859420387097086, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
       propertyPath: m_Name
       value: Journal
@@ -9423,6 +9427,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 47a679ae98feb864a8e86dd7633a8401, type: 3}
+    - target: {fileID: 9156847336674670039, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156847337166910868, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9156847337599232880, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9439,24 +9451,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9155859420387097086, guid: 8812aab6d907f5648b0195c28a69743d, type: 3}
   m_PrefabInstance: {fileID: 4056761983865149384}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &314972474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5142167556001459766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bbf9999c1f06348866e3deff9bdbab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ControledBook: {fileID: 0}
-  Mode: 0
-  PageFlipTime: 0.65
-  DelayBeforeStart: 0
-  TimeBetweenPages: 5
-  AutoStartFlip: 0
 --- !u!82 &171821075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9553,3 +9547,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &314972474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142167556001459766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bbf9999c1f06348866e3deff9bdbab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControledBook: {fileID: 0}
+  Mode: 0
+  PageFlipTime: 0.65
+  DelayBeforeStart: 0
+  TimeBetweenPages: 5
+  AutoStartFlip: 0
