@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NarratorJump : MonoBehaviour
 {
@@ -20,7 +21,13 @@ public class NarratorJump : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
-            loader.LoadNextLevel();
+        {
+            Debug.Log("saw c");
+            if (!SceneManager.GetSceneByName("Narrato3 End").isLoaded)
+                loader.LoadNextLevel();
+            else
+                SceneManager.LoadScene("MainMenu 1");
+        }
     }
 
     void Narrator()
