@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HorusPuzzle.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/BeforeACT7.unity
+    guid: a3fd399e9b390b0478c9ef17f9bdc2e9
+  - enabled: 1
     path: Assets/Scenes/Act7.unity
     guid: 9fa8e33e92e54e44986420f31bbf4320
   - enabled: 1
