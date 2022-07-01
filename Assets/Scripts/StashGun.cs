@@ -12,7 +12,7 @@ public class StashGun : MonoBehaviour
     public Transform player, gunContainer, fpsCamera;
     public bool equiped;
     public bool stashed=true;
-    public static bool slotFilled;
+    private bool slotFilled;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +36,21 @@ public class StashGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        //took the gun & presses q to equip it
-        if (!equiped && (_keyHolder.ContainsKey(_keyType) || stashed) && Input.GetKeyDown(KeyCode.E) && !slotFilled)
-        { Debug.Log("first if is true"); Equip(); Debug.Log("out of equip"); }
-       
-        //the gun is equipped & presses q to unequip it
-        if (equiped && Input.GetKeyDown(KeyCode.Q))
-        { Debug.Log("second if is true"); Unequip(); Debug.Log("out of unequip"); } 
+        if (Input.GetKeyDown(KeyCode.E)) 
+        {
+            //took the gun & presses q to equip it
+            if (!equiped && (_keyHolder.ContainsKey(_keyType) || stashed) && !slotFilled)
+            { Debug.Log("first if is true"); Equip(); Debug.Log("out of equip"); }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+            //the gun is equipped & presses q to unequip it
+            if (equiped)
+            { Debug.Log("second if is true"); Unequip(); Debug.Log("out of unequip"); }
+        }
+
     }
 
     public void Equip()
