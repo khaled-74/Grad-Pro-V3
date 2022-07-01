@@ -61,8 +61,8 @@ public class newMechanic : MonoBehaviour
                 {
                     snapped = true;
                     snapAudioSource.PlayOneShot(v1Clip[Random.Range(0, v1Clip.Length - 1)]);//<-------
-                                                                                            // Debug.Log("Win");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                     Debug.Log("Win");
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
                 }
                 //else

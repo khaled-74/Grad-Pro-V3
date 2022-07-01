@@ -29,9 +29,9 @@ public class HSlots : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (allsnaped(cubes))
         {
-            if (allsnaped(cubes))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 //entry = true;
                 
