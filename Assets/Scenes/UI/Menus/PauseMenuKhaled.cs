@@ -67,6 +67,7 @@ public class PauseMenuKhaled : MonoBehaviour
     public void BackTOMainMenu()
     {
         pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 
