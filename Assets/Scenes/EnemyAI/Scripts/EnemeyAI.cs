@@ -128,6 +128,8 @@ public class EnemeyAI : MonoBehaviour
            GetComponent<NavMeshAgent>().enabled = false;
            Destroy(audioSource);
 
+            Destroy(gameObject,10f); //destroy after time
+
 
         }
 
